@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Profile
+      <ion-searchbar></ion-searchbar>
+    </ion-title>
+    <ul>
+    <ion-button routerLink = "/home" routerLinkActive= "active">Home</ion-button>
+    <ion-button routerLink = "/profile" routerLinkActive = "active">Profile</ion-button>
+    <ion-button routerLink = "/community" routerLinkActive = "active">Community</ion-button>
+    </ul>
+  </ion-toolbar>
+</ion-header>
+ <ion-card>
+   <ion-card-header>
+     <ion-card-subtitle>UID: {{ user.uid }} </ion-card-subtitle>
+     <img [src]="user.photoUrl || 'assets/icon/anon.svg'">
+     <ion-card-title> {{ user.displayName }} || 'Mysterious User'</ion-card-title>
+   </ion-card-header>
+   <ion-card-content>
+     Anonymous: {{ user.isAnonymous }}<br> Email: {{ user.email || 'unkown'}}
+   </ion-card-content>
+ </ion-card>
